@@ -4,6 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Geri Dön Butonu için Stil */
+        .scroll-to-top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display: none;
+          z-index: 999;
+          background-color: none;
+          color: none;
+          border: none;
+          border-radius: 50%;
+          padding: 15px;
+          cursor: pointer;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .scroll-to-top:focus {
+          outline: none;
+        }
+        .scroll-to-top .fa {
+        font-size: 20px;
+        }
+
+    </style>
+
+    <script src="script.js"></script>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fa fa-arrow-up"></i>
+    </button>
 
     <title>Doğal Gaz Piyasası Sertifika Yönetmeliği</title>
 </head>
@@ -12,13 +47,12 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h2>DOĞAL GAZ PİYASASI SERTİFİKA YÖNETMELİĞİ</h2>
+            <h6 class="text-danger">Son güncelleme tarihi 05.03.2025</h4>
         </div>
 
         <a href="index.html">
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                <path fill-rule="evenodd" d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
-                <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
+            <svg width="2em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M48 256a208 208 0 1 1 416 0A208 208 0 1 1 48 256zm464 0A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM217.4 376.9c4.2 4.5 10.1 7.1 16.3 7.1c12.3 0 22.3-10 22.3-22.3l0-57.7 96 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-96 0 0-57.7c0-12.3-10-22.3-22.3-22.3c-6.2 0-12.1 2.6-16.3 7.1L117.5 242.2c-3.5 3.8-5.5 8.7-5.5 13.8s2 10.1 5.5 13.8l99.9 107.1z"/>
             </svg>
         </a>
 
@@ -220,7 +254,31 @@
 
             <p>Sertifikaların iptali</p>
             <p><strong>Madde 18 - </strong>Sertifikalar Kanunun 9 uncu maddesi hükümleri çerçevesinde iptal edilebilir. Bir sertifikanın iptali halinde, yeni bir sertifika verilene kadar verilen hizmetin aksamaması için Kurul gereken önlemleri alır.</p>
-            <p>Yapım ve hizmet sertifikası iptal edilen gerçek ve tüzel kişiler, Kurumun internet sayfasında, iç tesisat ve servis hatları sertifikası iptal edilen gerçek ve tüzel kişiler, sertifika aldığı şirketin internet sayfasında ilan edilir.</p>
+            <p>
+                Sertifika sahiplerince can güvenliğini tehlikeye atacak şekilde fiillerde bulunulduğunun yapılacak soruşturma sonucunda tespit edilmesi, sertifikanın verilmesine esas olan şartların faaliyetlerin yürütülmesi sırasında ortadan kalktığı anlamını taşır. Bu durumda herhangi bir yazılı ihtara gerek olmaksızın sertifika Kurul tarafından iptal edilebilir.
+            </p>
+            <p>
+                Yapım ve hizmet sertifikası iptal edilen gerçek ve tüzel kişiler, Kurumun internet sayfasında, iç tesisat ve servis hatları sertifikası iptal edilen gerçek ve tüzel kişiler, sertifika aldığı şirketin internet sayfasında ilan edilir.
+            </p>
+            <p>
+                Sertifika sahibince; ilgili dağıtım şirketinin izni olmadan gazlı hatlara müdahale edilmesi, şebekeye, sayaca veya tesisata müdahale edilerek müşterinin kaçak doğal gaz kullanımına neden olunması ya da standart dışı malzeme kullanılarak can güvenliğini tehlikeye atacak şekilde işlem tesis edilmesi veya gerekli tedbirlerin alınmaması suretiyle bu fiillere sebep olunması hallerinde, dağıtım şirketi ispatlayıcı somut bilgi ve belgelerle durumu Kuruma bildirir ve Kurul konuya ilişkin bir karar alıncaya kadar ilgili firmanın yeni başvuru dosyalarını kabul etmez. Bu konulardaki inceleme ve soruşturma Kurum tarafından mevzuatta yer alan sürelere itibar edilmeksizin öncelikli işlerden sayılır. Kurul, açılan soruşturma sonucunda yazılı ihtara gerek olmaksızın ilgili sertifikanın iptaline karar verebilir. Kurul tarafından sertifikanın iptal edilmesi durumunda; sertifika sahibi kişiler ile gerçek kişi ortakları ve sertifika iptaline konu fiilden sorumlu olduğu tespit edilen çalışanları, Kurum tarafından ilgili dağıtım şirketine ve diğer dağıtım şirketlerine yazılı olarak bildirilir.
+            </p>
+            <p>
+                Sertifikası bu şekilde iptal edilen kişilere, bu kişilerin sahibi/ortağı olan gerçek kişilerin sahibi/ortağı/çalışanı olduğu başka kişilere, sertifika iptaline konu fiilde sorumluluğu olan çalışanları istihdam eden kişilere veya bu çalışanların da sahibi/ortağı olduğu kişilere; sertifikanın iptal edildiği tarihten itibaren bir yıl süreyle yeni sertifika verilmez. (Ek cümle:RG-29/4/2022-31824) Ancak, bu maddenin ikinci fıkrası kapsamına giren fiiller için yürütülen soruşturma sonucunda Kurul, sertifika iptaline yönelik karar almasa da fiilde sorumluluğu olan çalışana veya bu çalışanın da sahibi/ortağı olduğu kişilere bir yıl süreyle yeni sertifika verilmemesine ve bir yıl süreyle söz konusu kişilerin başka bir sertifikalı firmada çalışamamasına karar verebilir.
+            </p>
+            <p>
+                Sertifikası bu şekilde iptal edilen kişilerin sahibi/ortağı olan gerçek kişiler ve/veya sertifika iptaline konu fiilde sorumluluğu olan çalışanlar, sertifikanın iptal edildiği tarihten itibaren bir yıl süreyle başka bir sertifika sahibi firmada, firma sahibi veya ortağı olamazlar, sertifika kapsamındaki faaliyetler ile ilgili kadrolarda istihdam edilemezler.
+            </p>
+            <p>
+                Sertifika iptaline konu fiilde sorumluluğu bulunan gerçek kişilerin, bu maddenin ikinci fıkrası kapsamında sertifikası iptal edilen kişi olmamakla birlikte ortağı/sahibi/çalışanı olmak bakımından halihazırda sertifikalı bir firma ile ilişkili olması halinde, ilgili sertifika sahibi tarafından söz konusu kişilerin ortaklıktan ve/veya çalışan ise işten çıktığına dair gerekli bilgi ve belgeler ilgili dağıtım şirketine/Kuruma ibraz edilene kadar bu kişiler sertifikalı firmadaki görevleri kapsamında faaliyette bulunamaz. Tüketici mağduriyetine sebebiyet verilmemesi bakımından mevcut yarım kalan işlerin tamamlanması ile sınırlı olmak üzere bu kişiler ilgili dağıtım şirketinin kontrol ve gözetiminde faaliyet gösterebilir.
+            </p>
+            <p>
+                Bu madde hükümleri, lisans sahipleri ve tüketicilere verdikleri hizmet kapsamında bu maddede belirtilen fiiller nedeniyle yapım ve hizmet sertifikasının Kurul tarafından iptal edilmesi ve sertifikasız kişilerin bu maddede sayılan fiilleri gerçekleştirmesi nedeniyle haklarında işlem yapılması halinde de uygulanır.
+            </p>
+            <p> 
+                İç tesisat ve servis hatları sertifikası bu maddenin ikinci fıkrası kapsamında iptal edilen kişinin, bu Yönetmelik hükümlerine aykırılık teşkil etmeyecek şekilde farklı dağıtım bölgesi/bölgelerinde faaliyette bulunmak üzere ilgili dağıtım şirketi/şirketleri tarafından verilmiş başka sertifikalarının da olması halinde;  sertifika süresi bitinceye kadar  mevcut  sertifika/ sertifikaları kapsamında faaliyette bulunabilir ve mevcut sertifika/sertifikaları yenilenebilir, ancak hangi dağıtım bölgesi içerisinde faaliyet göstermek istediğine bakılmaksızın bir yıl süreyle yeni sertifika verilemez. Bu durumda da bu maddenin beşinci ve altıncı fıkra hükümleri uygulanır. Sertifika iptaline konu fiilde sorumluluğu olan ve bu Yönetmelik kapsamında belgesi sunulan çalışanlar ve/veya firma sahibi/ortaklar aynı firmanın diğer sertifikaları kapsamında faaliyette bulunmak üzere istihdam edilemezler.
+            </p>
+            
 
         </div>
 
@@ -278,7 +336,53 @@
 
             <p>Bildirimler</p>
             <p><strong>Madde 24 - </strong>Bu Yönetmelik uyarınca sertifika sahipleri, yetki belgesi sahipleri ile Kurum arasında yapılacak karşılıklı tüm bildirimler 7201 sayılı Tebligat Kanunu hükümlerine uygun olarak yapılır.</p>
-            <p>Bildirim adresinde bir değişiklik olması durumunda, sertifika sahibinin veya yetki belgesi sahibinin adres değişikliğini, adres değişikliği gerçekleşmeden önceki üç iş günü içinde noter kanalıyla Kuruma bildirmesi zorunludur. Bu bildirimin belirtilen süre içinde yapılmaması halinde, Kurum tarafından eski adrese yapılmış tebligatlar geçerli sayılır.</p>
+            <p>Bildirim adresinde bir değişiklik olması durumunda, yapım ve hizmet sertifikası sahibinin veya yetki belgesi sahibinin adres değişikliğini Kuruma, iç tesisat ve servis hatları sertifikası sahibinin adres değişikliğini ilgili dağıtım şirketi/yetki belgesi sahibine, adres değişikliği gerçekleşmeden önceki üç iş günü içinde bildirmesi zorunludur.</p>
+
+            <p>Yetki durdurma</p>
+            <p><strong>Madde 24/A - </strong>İç tesisat ve servis hatları sertifikası kapsamında gerçekleştirilen faaliyetler kapsamında;</p>
+            <p>
+                a) Dağıtım şirketi tarafından sertifikalı firmaya yapılan yazılı bildirimin; adreste bulunamama ya da adres değişikliği gibi nedenler ile tebliğ edilememesi,
+                <br>b) Dağıtım şirketi tarafından söz konusu işyerine fiili olarak yapılan birden fazla kontrol/ziyaretlerde işyerinin kapalı olması,
+                <br>c) İç tesisat ve servis hatları sertifikası sahibi firmanın vizesiz şekilde faaliyette bulunduğunun tespit edilmesi,
+                <br>ç) Sertifikalı firmanın bu Yönetmelik hükümleri kapsamında istihdam etmek zorunda olduğu tam gün esaslı çalışması zorunlu olan personele ait aylık sigorta dökümünü dağıtım şirketinin belirlediği periyotlar içerisinde ilgili dağıtım şirketine ibraz etmemesi,
+                <br>d) Dağıtım şirketi tarafından istenen bilgi ve belgelerin on beş gün içinde sunulmaması,
+                <br>e) Sertifikalı firmanın, 11 inci maddenin ikinci fıkrasının (r) bendindeki şartları sağlamaması,
+                <br>f) Sertifika sahibinin; proje onayı olmadan iç tesisat imalatı yapması veya proje onayı için dağıtım şirketine sunduğu bilgilere aykırı işlem tesis etmesi,
+            </p>
+
+            <p>
+                hallerinde dağıtım şirketi, konuya ilişkin gerekli bilgi/belgeleri temin ederek ve/veya tespitlerini tutanak altına alarak, sertifikalı firmanın yeni başvuru dosyalarını ilgili mevzuata aykırılığın ortadan kalkmasına yönelik bilgi ve belgelerin kendisine ibraz edilip varsa gerekli işlemleri tesis etmesine kadar kabul etmez. Yeni başvuru dosyası kabul edilmeyerek yetkisi durdurulan sertifika sahibinin, dağıtım şirketinin internet sayfasının ilgili bölümüne yetkisinin durdurulduğuna ilişkin tarih ve saat içeren ibare konulur. Dağıtım şirketi, yetkileri durdurulan veya açılan sertifika sahibine yazılı olarak, ayrıca kısa mesaj (SMS) veya e-posta yoluyla gerekçeli bildirim yapar ve bu bildirime ilişkin bilgi ve belgeleri talep edilmesi halinde Kuruma sunar. Yapılacak bildirimde yetkinin durdurulduğu veya açıldığı tarihler net bir biçimde belirtilir.
+            </p>
+
+            <p>
+                Birinci fıkrada belirtilen fiillerden aynı bent kapsamındakilerin sertifika süresi boyunca iki kez gerçekleştirilmesi halinde dağıtım şirketi ilgili bilgi ve belgelerle birlikte tespitin yapıldığı tarihten itibaren beş iş günü içerisinde konunun ilgili mevzuat ihlali kapsamında incelenmesi için Kuruma bildirimde bulunur. Yeni başvuru dosyası sunması engellenen sertifika sahibi, dağıtım şirketi tarafından önceden onaylanmış projelerin henüz tamamlanmamış imalatı ve gaz açma işlerini, ilgili dağıtım şirketinin nezaretinde devam ettirir. Sertifika sahibi tarafından ilgili mevzuata aykırılığın düzeltilmesi halinde, Kuruma bildirim yapıldıktan sonra eş zamanlı olarak dağıtım şirketince yetkisi açılır.
+            </p>
+
+            <p>
+                Sertifika alma/tadil/vize başvurusunda belgesi sunulan personelin, başka bir dağıtım lisansına konu bölgede faaliyet göstermek üzere sahip olunan sertifika kapsamında ilgili dağıtım şirketine ibraz edildiğinin tespit edilmesi halinde, sertifikalardan birisi sona ermeden veya başka personelin diğer sertifika kapsamında faaliyette bulunulabilmesi için istihdam edildiği tespit edilmeden hiçbir şekilde faaliyette bulunulamaz. İlgili dağıtım şirketleri tarafından bu maddenin birinci ve ikinci fıkraları hükümleri uygulanır.
+            </p>
+
+            <p>
+                Dağıtım şirketi tarafından, bu maddede belirtilmeyen ancak sertifikalı firmalarca yürütülen iş ve işlemlerin; sistem güvenliği ve tüketici memnuniyetini engelleyici nitelikte olması nedeniyle, ilgili mevzuata aykırılığın ortadan kalkmasına kadarki süreçte sertifikalı firmanın yetkilerinin durdurulmasına sebebiyet verecek kadar aciliyet oluşturduğu şeklinde değerlendirmede bulunulması halinde, gerekçeleri ile birlikte Kuruma başvuru yapılır.  Kurum tarafından uygun bulunması halinde ilgili sertifikalı firma hakkında bu maddenin birinci ve ikinci fıkraları hükümleri uygulanır. Kurul, sertifika sahiplerinin yetki durdurulmasına neden olacak hususlarda ilave düzenlemeler yapabilir.
+            </p>
+
+            <p>Mücbir sebepler</p>
+            <p><strong>Madde 24/B</strong></p>
+            <p>
+                Bir olayın mücbir sebep hali sayılabilmesi için; olaydan etkilenen tarafın gerekli özen ve dikkati göstermiş ve önlemleri almış olmasına karşın önlenemeyecek, kaçınılamayacak veya giderilemeyecek olması ve bu durumun etkilenen tarafın ilgili mevzuat kapsamındaki yükümlülüklerini yerine getirmesini engellemesi gerekir.
+            </p>
+            
+            <p>
+                Mücbir sebeplerin gerçekleşmesi halinde, mücbir sebeplerin etkileri giderilinceye kadar, sertifika sahibi kişinin ilgili mevzuattan kaynaklanan yükümlülükleri etkilendikleri oranda Kurum/dağıtım şirketinin değerlendirmesi sonucu ertelenebilir. Söz konusu yükümlülüklerin yerine getirilemeyeceğinin anlaşıldığı hallerde, Kurum/dağıtım şirketi tüzel kişinin yükümlülüğünün kaldırılmasına da karar verebilir. Yükümlülüklerin ertelenmesi veya kaldırılması kararının verilebilmesi için, sertifika sahibi tüzel kişinin mücbir sebebin başlama tarihini, mahiyetini, yükümlülüklerine olan etkilerini ve mümkün olması halinde etkilerin tahmini giderilme süresini içeren başvurusunu, mücbir sebebin başlama tarihinden itibaren on beş gün içerisinde Kuruma/dağıtım şirketine yazılı olarak bildirmesi zorunludur.
+            </p>
+            <p>
+                Mücbir sebep halleri ve/veya Kurum tarafından belirlenen durumlarda, sertifika başvurusunda bulunan kişiler ile mevcut sertifika sahipleri, bu Yönetmelik hükümleri kapsamında Kuruma/dağıtım şirketine ibraz etmekle yükümlü oldukları belgelerin fotokopisini de sunabilirler. Ancak, mevcut sertifikaların süresi sona erinceye kadarki süreçte Kurum ya da dağıtım şirketince talep edilmesi halinde fotokopisini sundukları belgenin aslı ya da onaylı suretlerini Kurum ya da dağıtım şirketinin talep ettiği tarihten itibaren 60 gün içinde ibraz etmekle yükümlüdürler. 
+            </p>
+            
+
+
+
+
 
         </div>
 
@@ -317,9 +421,24 @@
             <p><strong>Geçici Madde 9 - </strong>Mevcut yapım ve hizmet sertifikalarındaki faaliyet konuları; vize ya da faaliyet konusu tadili başvurusu sırasında bu madde ile yapılan düzenlemeye uygun hale getirilir. “Endüstriyel ve Büyük Tüketimli Tesislerin Doğal Gaza Dönüşümü Mühendis Yeterlilik Belgesi”, “Doğal Gaz İşletme Bakım Operatörü (Seviye 4) mesleki yeterlilik belgesi”, “Doğal Gaz Altyapı Yapım ve Kontrol Personeli (Seviye 4) mesleki yeterlilik belgesi” ile “İç Tesisat Yapım, Bakım-Onarım” faaliyet konusu için “Akredite edilmiş kuruluşlarca verilen Polietilen boru (geçme ve semer-mesnet elektrofüzyon) kaynakçı belgesi” ve “Doğal Gaz Polietilen Boru Kaynakçısı (Seviye 3) mesleki yeterlilik belgesi” ile Ek-3’ün (2.8) numaralı maddesindeki belgenin İç Tesisat ve Servis Hatları Sertifikası; alma, faaliyet konusu tadili ve vize başvurusu sırasında sunulması uygulaması 1/1/2013 tarihi itibari ile başlar.</p>
             <br>
 
+            <p>Vize işlemleri</p>
+            <p><strong>Geçici Madde 10 - </strong>Yapım ve hizmet sertifikalarında, bu maddenin yürürlüğe girdiği tarihten önce yapılmış olan vize işlemlerinin geçerlilik tarihleri, sertifikaya derç edilmiş olan vize geçerlilik tarihine kadar aynen devam eder.</p>
+            
+            <p>Onaylı kimlik kartı işlemleri</p>
+            <p><strong>Geçici Madde 11 - </strong>Onaylı kimlik kartı ile ilgili uygulama 01/01/2019 tarihinden itibaren başlar.</p>
+
+            <p>Taahhütname sunulması</p>
+            <p><strong>Geçici Madde 12 - </strong>İç tesisat ve servis hatları sertifikası sahipleri tarafından Ek-8’de yer alan taahhütnamenin yeni şekli bu maddenin yürürlüğe girdiği tarihten itibaren 1 ay içerisinde ilgili dağıtım şirketine sunulur. Dağıtım şirketi taahhütnamenin yeni şeklini süresi içerisinde sunmayan sertifika sahiplerinin taahhütnameyi sunana kadar yeni proje dosyalarını kabul etmez.</p>
+
+            <p>Sertifikaların tadil süreleri</p>
+            <p><strong>Geçici Madde 13 - </strong>Bu maddenin yürürlüğe girdiği tarihten itibaren,  iç tesisat ve servis hatları sertifikasının, proje ile yapım, bakım ve onarım faaliyetlerinin ayrıştırılmadan tek bir faaliyet konusu olarak verilmesi şeklinde uygulama yapılacağından; bu maddenin yürürlüğe girdiği tarihten itibaren üç ay içerisinde iç tesisat proje ile iç tesisat yapım, bakım ve onarım faaliyet konularında ayrı ayrı yetkilendirilen sertifika sahipleri, mevcut sertifikalarının bedel alınmaksızın tadil edilmesini teminen gerekli bilgi/belgeler ile dağıtım şirketine başvuruda bulunmakla yükümlüdürler. Söz konusu üç aylık sürenin sonuna kadar tadil başvurusunda bulunmayan veya başvuru yapmış olsa dahi ilgili dağıtım şirketince sertifikası, bu Yönetmelik hükümleri çerçevesinde yapılacak inceleme sonucunda tadil edilmeyen mevcut sertifika sahipleri iç tesisat proje, yapım, bakım, onarım faaliyetlerinde bulunamaz. Dağıtım şirketi, bölgesindeki tüm sertifikalı firmalara başvuru süresini ve istenecek bilgi/belgeleri yazılı olarak tebliğ eder ve bu bilgileri internet sayfasında duyurur.</p>
+
+            
             <p>Yürürlük</p>
             <p><strong>Madde 25 - </strong>Bu Yönetmelik, 2/11/2002 tarihinden geçerli olmak üzere yayımı tarihinde yürürlüğe girer.</p>
             <br>
+
+
 
             <p>Yürütme</p>
             <p><strong>Madde 26 - </strong>Bu Yönetmelik hükümlerini Başkan yürütür.</p>
@@ -517,10 +636,8 @@
 
         <div class="my-5"> <!-- Ana Sayfa'ya dön butonu -->
             <a href="index.html">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    <path fill-rule="evenodd" d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"/>
-                    <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z"/>
+                <svg width="2em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M48 256a208 208 0 1 1 416 0A208 208 0 1 1 48 256zm464 0A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM217.4 376.9c4.2 4.5 10.1 7.1 16.3 7.1c12.3 0 22.3-10 22.3-22.3l0-57.7 96 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-96 0 0-57.7c0-12.3-10-22.3-22.3-22.3c-6.2 0-12.1 2.6-16.3 7.1L117.5 242.2c-3.5 3.8-5.5 8.7-5.5 13.8s2 10.1 5.5 13.8l99.9 107.1z"/>
                 </svg>
             </a>
         </div>
